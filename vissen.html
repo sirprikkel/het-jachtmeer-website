@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vissen bij Het Jachtmeer — Oss</title>
+  <meta name="description" content="Vissen bij Het Jachtmeer in Oss. Een populaire en rustige visplek midden in de natuur.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script defer src="https://analytics.code-lieshout.nl/prikkel" data-website-id="fb935523-9464-4310-8603-cc0d20333446"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: '#15803D', leaf: '#22C55E', teal: '#0D9488',
+            mint: '#F0FDF4', 'mint-light': '#ECFDF5', 'dark-green': '#14532D', earth: '#8B6914',
+          },
+          fontFamily: { serif: ['Lora', 'serif'], sans: ['Raleway', 'sans-serif'] },
+          borderRadius: { 'organic': '24px', 'organic-sm': '16px' },
+          boxShadow: { 'natural': '0 8px 32px rgba(0,0,0,0.08)', 'natural-lg': '0 16px 48px rgba(0,0,0,0.12)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .hero-overlay { background: linear-gradient(to bottom, rgba(20,83,45,0.3) 0%, rgba(20,83,45,0.7) 100%); }
+    @media (prefers-reduced-motion: reduce) { * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
+  </style>
+</head>
+<body class="bg-mint font-sans text-dark-green">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-sm shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="font-serif font-bold text-xl text-forest cursor-pointer">🌿 Het Jachtmeer</a>
+        <div class="hidden md:flex items-center gap-6">
+          <a href="index.html" class="text-dark-green hover:text-forest transition-colors duration-200 cursor-pointer">Home</a>
+          <a href="vissen.html" class="text-forest font-medium cursor-pointer">Vissen</a>
+          <a href="schaatsen.html" class="text-dark-green hover:text-forest transition-colors duration-200 cursor-pointer">Schaatsen</a>
+          <a href="contact.html" class="bg-forest text-white px-5 py-2 rounded-organic-sm hover:bg-leaf transition-colors duration-200 cursor-pointer">Bezoek ons</a>
+        </div>
+        <button id="menu-toggle" class="md:hidden p-2 cursor-pointer min-h-[44px] min-w-[44px] flex items-center justify-center" aria-label="Menu openen">
+          <svg class="w-6 h-6 text-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden pb-4">
+        <div class="flex flex-col gap-3">
+          <a href="index.html" class="text-dark-green py-2 cursor-pointer">Home</a>
+          <a href="vissen.html" class="text-forest font-medium py-2 cursor-pointer">Vissen</a>
+          <a href="schaatsen.html" class="text-dark-green py-2 cursor-pointer">Schaatsen</a>
+          <a href="contact.html" class="bg-forest text-white px-5 py-2 rounded-organic-sm text-center cursor-pointer">Bezoek ons</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="relative min-h-[60vh] flex items-center justify-center mt-16">
+    <div class="absolute inset-0">
+      <img src="images/google_place_4.jpg" alt="Vissen bij Het Jachtmeer" class="w-full h-full object-cover">
+      <div class="hero-overlay absolute inset-0"></div>
+    </div>
+    <div class="relative z-10 text-center px-4 md:px-6 max-w-3xl">
+      <h1 class="font-serif text-4xl md:text-5xl font-bold text-white mb-4">Vissen</h1>
+      <p class="text-xl text-white/90 font-light">Een populaire visplek aan het water, midden in de natuur van Oss.</p>
+    </div>
+    <div class="absolute bottom-0 left-0 w-full overflow-hidden">
+      <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full">
+        <path d="M0,40 C480,80 960,0 1440,40 L1440,80 L0,80 Z" fill="#F0FDF4"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="py-20 px-4 md:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto">
+      <div class="bg-white rounded-organic p-8 md:p-12 shadow-natural mb-12">
+        <h2 class="font-serif text-2xl md:text-3xl font-bold text-forest mb-6">Vissen bij Het Jachtmeer</h2>
+        <p class="text-dark-green/80 leading-relaxed mb-6">Het Jachtmeer is een geliefde visplek in de wijk Mettegeupel in Oss. De grote plas biedt een rustige omgeving waar je heerlijk aan de waterkant kunt zitten en genieten van de natuur. Zoals een bezoeker het verwoordt: "Een klein eilandje van rust, vlakbij de stad. Om te vissen of gewoon een wandeling te maken."</p>
+        <p class="text-dark-green/80 leading-relaxed mb-6">Het water wordt omringd door rietvelden en mooie bomen, wat zorgt voor een schilderachtige sfeer. Het natuurgebied is het hele jaar door toegankelijk — 24 uur per dag, 7 dagen per week.</p>
+        
+        <div class="bg-teal/5 rounded-organic-sm p-6 mb-6 border border-teal/10">
+          <h3 class="font-serif text-lg font-semibold text-teal mb-3 flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"/></svg>
+            Goed om te weten
+          </h3>
+          <ul class="space-y-2 text-dark-green/70">
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-teal mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+              Vissers boven 15 jaar hebben een landelijke VISpas nodig
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-teal mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+              Check de lokale regels bij hengelsportvereniging Ons Genoegen in Oss
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-teal mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+              Het gebied is 24 uur per dag vrij toegankelijk
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-teal mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+              Respecteer de natuur: neem je afval mee
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Quote -->
+      <div class="bg-forest/5 rounded-organic p-8 border border-forest/10 mb-12">
+        <blockquote class="text-dark-green/80 italic text-lg leading-relaxed">
+          "Leuk mooie vis gevangen"
+        </blockquote>
+        <p class="text-dark-green/50 mt-3 text-sm">— Jeffrey V., Google review</p>
+      </div>
+
+      <!-- Foto grid -->
+      <div class="grid md:grid-cols-2 gap-6">
+        <img src="images/google_place_2.jpg" alt="Waterpartij bij Het Jachtmeer" class="w-full h-64 object-cover rounded-organic shadow-natural" loading="lazy">
+        <img src="images/google_place_5.jpg" alt="Natuur rondom Het Jachtmeer" class="w-full h-64 object-cover rounded-organic shadow-natural" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 px-4 md:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="bg-teal rounded-organic p-10 shadow-natural-lg">
+        <h2 class="font-serif text-2xl md:text-3xl font-bold text-white mb-4">Kom een keer vissen bij Het Jachtmeer</h2>
+        <p class="text-white/80 mb-6">Gratis toegang, het hele jaar door geopend.</p>
+        <a href="contact.html" class="inline-block bg-white text-teal px-8 py-3 rounded-organic-sm font-semibold hover:bg-mint transition-colors duration-200 cursor-pointer">Bekijk de route</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark-green text-white/80 py-12 px-4 md:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <h3 class="font-serif text-xl font-bold text-white mb-4">Het Jachtmeer</h3>
+          <p class="text-white/60 leading-relaxed">Natuurgebied in de wijk Mettegeupel, Oss.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold text-white mb-4">Activiteiten</h4>
+          <ul class="space-y-2">
+            <li><a href="vissen.html" class="hover:text-leaf transition-colors duration-200 cursor-pointer">Vissen</a></li>
+            <li><a href="schaatsen.html" class="hover:text-leaf transition-colors duration-200 cursor-pointer">Schaatsen</a></li>
+            <li><a href="contact.html" class="hover:text-leaf transition-colors duration-200 cursor-pointer">Bereikbaarheid</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-white mb-4">Locatie</h4>
+          <p class="text-white/60">Jachtslot 3<br>5346 WK Oss</p>
+          <a href="https://maps.app.goo.gl/tLU4Hb7Dak1Aaz6g7" target="_blank" rel="noopener" class="inline-flex items-center gap-1 mt-3 text-leaf hover:text-white transition-colors duration-200 cursor-pointer">Google Maps →</a>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-8 text-center text-white/40 text-sm">
+        <p>Gebouwd door <a href="https://www.code-lieshout.nl" class="text-leaf hover:text-white transition-colors duration-200 cursor-pointer">Code Lieshout</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

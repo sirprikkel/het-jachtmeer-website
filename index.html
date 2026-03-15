@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Het Jachtmeer — Natuurgebied in Oss</title>
+  <meta name="description" content="Het Jachtmeer is een prachtig natuurgebied in de wijk Mettegeupel, Oss. Wandelen, vissen en schaatsen in een oase van rust.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script defer src="https://analytics.code-lieshout.nl/prikkel" data-website-id="fb935523-9464-4310-8603-cc0d20333446"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: '#15803D',
+            leaf: '#22C55E',
+            teal: '#0D9488',
+            mint: '#F0FDF4',
+            'mint-light': '#ECFDF5',
+            'dark-green': '#14532D',
+            earth: '#8B6914',
+          },
+          fontFamily: {
+            serif: ['Lora', 'serif'],
+            sans: ['Raleway', 'sans-serif'],
+          },
+          borderRadius: {
+            'organic': '24px',
+            'organic-sm': '16px',
+          },
+          boxShadow: {
+            'natural': '0 8px 32px rgba(0,0,0,0.08)',
+            'natural-lg': '0 16px 48px rgba(0,0,0,0.12)',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .blob-shape { border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%; }
+    .blob-shape-2 { border-radius: 40% 60% 30% 70% / 60% 40% 50% 50%; }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    }
+    .hero-overlay {
+      background: linear-gradient(to bottom, rgba(20,83,45,0.4) 0%, rgba(20,83,45,0.7) 100%);
+    }
+  </style>
+</head>
+<body class="bg-mint font-sans text-dark-green">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-sm shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="font-serif font-bold text-xl text-forest cursor-pointer">🌿 Het Jachtmeer</a>
+        <!-- Desktop menu -->
+        <div class="hidden md:flex items-center gap-6">
+          <a href="index.html" class="text-forest font-medium hover:text-leaf transition-colors duration-200 cursor-pointer">Home</a>
+          <a href="vissen.html" class="text-dark-green hover:text-forest transition-colors duration-200 cursor-pointer">Vissen</a>
+          <a href="schaatsen.html" class="text-dark-green hover:text-forest transition-colors duration-200 cursor-pointer">Schaatsen</a>
+          <a href="contact.html" class="bg-forest text-white px-5 py-2 rounded-organic-sm hover:bg-leaf transition-colors duration-200 cursor-pointer">Bezoek ons</a>
+        </div>
+        <!-- Mobile hamburger -->
+        <button id="menu-toggle" class="md:hidden p-2 cursor-pointer min-h-[44px] min-w-[44px] flex items-center justify-center" aria-label="Menu openen">
+          <svg class="w-6 h-6 text-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden pb-4">
+        <div class="flex flex-col gap-3">
+          <a href="index.html" class="text-forest font-medium py-2 cursor-pointer">Home</a>
+          <a href="vissen.html" class="text-dark-green py-2 hover:text-forest cursor-pointer">Vissen</a>
+          <a href="schaatsen.html" class="text-dark-green py-2 hover:text-forest cursor-pointer">Schaatsen</a>
+          <a href="contact.html" class="bg-forest text-white px-5 py-2 rounded-organic-sm text-center hover:bg-leaf transition-colors duration-200 cursor-pointer">Bezoek ons</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="relative min-h-[90vh] flex items-center justify-center mt-16">
+    <div class="absolute inset-0">
+      <img src="images/google_place_1.jpg" alt="Het Jachtmeer in Oss — natuurgebied met water en groen" class="w-full h-full object-cover">
+      <div class="hero-overlay absolute inset-0"></div>
+    </div>
+    <div class="relative z-10 text-center px-4 md:px-6 max-w-3xl">
+      <h1 class="font-serif text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">Het Jachtmeer</h1>
+      <p class="text-xl md:text-2xl text-white/90 font-light mb-8">Een klein eilandje van rust, vlakbij de stad. Wandelen, vissen en schaatsen in het hart van Oss.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#activiteiten" class="bg-leaf text-white px-8 py-3 rounded-organic-sm font-semibold hover:bg-forest transition-colors duration-200 cursor-pointer shadow-natural">Ontdek activiteiten</a>
+        <a href="contact.html" class="bg-white/20 backdrop-blur-sm text-white border border-white/40 px-8 py-3 rounded-organic-sm font-semibold hover:bg-white/30 transition-colors duration-200 cursor-pointer">Route plannen</a>
+      </div>
+    </div>
+    <!-- Organic bottom wave -->
+    <div class="absolute bottom-0 left-0 w-full overflow-hidden">
+      <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full">
+        <path d="M0,80 C360,120 720,40 1080,80 C1260,100 1380,60 1440,80 L1440,120 L0,120 Z" fill="#F0FDF4"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Activiteiten -->
+  <section id="activiteiten" class="py-20 px-4 md:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="font-serif text-3xl md:text-4xl font-bold text-forest mb-4">Activiteiten</h2>
+        <p class="text-lg text-dark-green/70 max-w-xl mx-auto">Het Jachtmeer biedt het hele jaar door mogelijkheden om te genieten van de natuur.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Vissen -->
+        <a href="vissen.html" class="group bg-white rounded-organic p-8 shadow-natural hover:shadow-natural-lg transition-all duration-300 cursor-pointer">
+          <div class="w-16 h-16 bg-teal/10 rounded-organic-sm flex items-center justify-center mb-6 group-hover:bg-teal/20 transition-colors duration-200">
+            <svg class="w-8 h-8 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3c-4.97 0-9 3.582-9 8s4.03 8 9 8c.35 0 .697-.02 1.038-.055M12 3c4.97 0 9 3.582 9 8 0 1.847-.744 3.543-1.985 4.85"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11l3-3m0 0l3 3m-3-3v8"/></svg>
+          </div>
+          <h3 class="font-serif text-xl font-semibold text-forest mb-3">Vissen</h3>
+          <p class="text-dark-green/70 leading-relaxed">Een populaire visplek waar je heerlijk aan de waterkant kunt zitten. Geniet van de rust en de natuur.</p>
+          <span class="inline-block mt-4 text-teal font-medium group-hover:translate-x-1 transition-transform duration-200">Meer info →</span>
+        </a>
+        <!-- Schaatsen -->
+        <a href="schaatsen.html" class="group bg-white rounded-organic p-8 shadow-natural hover:shadow-natural-lg transition-all duration-300 cursor-pointer">
+          <div class="w-16 h-16 bg-forest/10 rounded-organic-sm flex items-center justify-center mb-6 group-hover:bg-forest/20 transition-colors duration-200">
+            <svg class="w-8 h-8 text-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg>
+          </div>
+          <h3 class="font-serif text-xl font-semibold text-forest mb-3">Schaatsen</h3>
+          <p class="text-dark-green/70 leading-relaxed">Bij strenge vorst verandert het meer in een prachtige natuurijsbaan. Een winters avontuur midden in Oss.</p>
+          <span class="inline-block mt-4 text-teal font-medium group-hover:translate-x-1 transition-transform duration-200">Meer info →</span>
+        </a>
+        <!-- Wandelen -->
+        <div class="group bg-white rounded-organic p-8 shadow-natural hover:shadow-natural-lg transition-all duration-300">
+          <div class="w-16 h-16 bg-leaf/10 rounded-organic-sm flex items-center justify-center mb-6 group-hover:bg-leaf/20 transition-colors duration-200">
+            <svg class="w-8 h-8 text-leaf" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+          </div>
+          <h3 class="font-serif text-xl font-semibold text-forest mb-3">Wandelen</h3>
+          <p class="text-dark-green/70 leading-relaxed">Een route van circa 3 kilometer langs kronkelende waterlopen, rietvelden en prachtige bomen. Honden welkom.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Over het gebied -->
+  <section class="py-20 px-4 md:px-6 lg:px-8 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="font-serif text-3xl md:text-4xl font-bold text-forest mb-6">Over Het Jachtmeer</h2>
+          <p class="text-dark-green/80 leading-relaxed mb-4">Het Jachtmeer ligt in de duurzaam gebouwde wijk Mettegeupel in Oss. Het is een waterrijk natuurgebied met een brede kronkelende waterloop tussen rietvelden, een grote plas omzoomd door mooie bomen, en een prachtig stukje poldergebied.</p>
+          <p class="text-dark-green/80 leading-relaxed mb-4">Het gebied kent een geleidelijke overgang van ecologisch openbaar groen naar privétuinen. Door het maaibeleid wordt de bodem steeds schraler, waardoor er steeds meer zeldzame planten en dieren verschijnen.</p>
+          <p class="text-dark-green/80 leading-relaxed">Van hoog opgeschoten begroeiing tot weidse vergezichten over water en weilanden — er valt altijd iets te ontdekken.</p>
+        </div>
+        <div class="relative">
+          <img src="images/google_place_2.jpg" alt="Natuur bij Het Jachtmeer" class="rounded-organic shadow-natural-lg w-full object-cover h-[400px]" loading="lazy">
+          <div class="absolute -bottom-4 -left-4 w-24 h-24 bg-leaf/20 blob-shape -z-10"></div>
+          <div class="absolute -top-4 -right-4 w-32 h-32 bg-teal/10 blob-shape-2 -z-10"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="py-20 px-4 md:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center gap-2 bg-white rounded-organic-sm px-6 py-3 shadow-natural mb-6">
+          <span class="text-2xl font-bold text-forest">4.4</span>
+          <div class="flex gap-0.5">
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-yellow-400/40" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <span class="text-dark-green/60 text-sm">op Google</span>
+        </div>
+        <h2 class="font-serif text-3xl md:text-4xl font-bold text-forest mb-4">Wat bezoekers zeggen</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-organic p-8 shadow-natural">
+          <div class="flex gap-1 mb-4">
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-dark-green/80 italic mb-4 leading-relaxed">"Een klein eilandje van rust, vlakbij de stad. Om te vissen of gewoon een wandeling te maken."</p>
+          <p class="text-dark-green/50 text-sm font-medium">— Stefan D.</p>
+        </div>
+        <div class="bg-white rounded-organic p-8 shadow-natural">
+          <div class="flex gap-1 mb-4">
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-dark-green/80 italic mb-4 leading-relaxed">"Je kan er best een aardig rondje lopen met de hond. Bij regenachtig weer vrij modderig."</p>
+          <p class="text-dark-green/50 text-sm font-medium">— Daniella T.</p>
+        </div>
+        <div class="bg-white rounded-organic p-8 shadow-natural">
+          <div class="flex gap-1 mb-4">
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-dark-green/80 italic mb-4 leading-relaxed">"Mooi wandelen. De wijk Harnas mooi gelegen aan het jachtmeer, omsloten door kleine waterpartijen."</p>
+          <p class="text-dark-green/50 text-sm font-medium">— Chris v.B.</p>
+        </div>
+      </div>
+      <div class="text-center mt-10">
+        <a href="https://maps.app.goo.gl/tLU4Hb7Dak1Aaz6g7" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-teal hover:text-forest transition-colors duration-200 font-medium cursor-pointer">
+          Bekijk alle reviews op Google Maps
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galerij -->
+  <section class="py-20 px-4 md:px-6 lg:px-8 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="font-serif text-3xl md:text-4xl font-bold text-forest mb-4">Impressie</h2>
+        <p class="text-lg text-dark-green/70">Beelden van het natuurgebied door het jaar heen.</p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div class="row-span-2">
+          <img src="images/google_place_3.jpg" alt="Het Jachtmeer natuur" class="w-full h-full object-cover rounded-organic cursor-pointer hover:opacity-90 transition-opacity duration-200" loading="lazy" onclick="openLightbox(this.src)">
+        </div>
+        <div>
+          <img src="images/google_place_4.jpg" alt="Waterpartij Jachtmeer" class="w-full h-48 md:h-56 object-cover rounded-organic cursor-pointer hover:opacity-90 transition-opacity duration-200" loading="lazy" onclick="openLightbox(this.src)">
+        </div>
+        <div>
+          <img src="images/google_place_5.jpg" alt="Groen bij het Jachtmeer" class="w-full h-48 md:h-56 object-cover rounded-organic cursor-pointer hover:opacity-90 transition-opacity duration-200" loading="lazy" onclick="openLightbox(this.src)">
+        </div>
+        <div class="col-span-2">
+          <img src="images/google_place_1.jpg" alt="Panorama Jachtmeer Oss" class="w-full h-48 md:h-56 object-cover rounded-organic cursor-pointer hover:opacity-90 transition-opacity duration-200" loading="lazy" onclick="openLightbox(this.src)">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 px-4 md:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="bg-forest rounded-organic p-12 md:p-16 shadow-natural-lg relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-leaf/20 blob-shape translate-x-1/3 -translate-y-1/3"></div>
+        <div class="absolute bottom-0 left-0 w-48 h-48 bg-teal/20 blob-shape-2 -translate-x-1/3 translate-y-1/3"></div>
+        <div class="relative z-10">
+          <h2 class="font-serif text-3xl md:text-4xl font-bold text-white mb-4">Kom langs bij Het Jachtmeer</h2>
+          <p class="text-white/80 text-lg mb-8 max-w-xl mx-auto">Het natuurgebied is 24 uur per dag toegankelijk. Gratis entree. Honden welkom.</p>
+          <a href="contact.html" class="inline-block bg-white text-forest px-8 py-3 rounded-organic-sm font-semibold hover:bg-mint transition-colors duration-200 cursor-pointer shadow-natural">Bekijk de route</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark-green text-white/80 py-12 px-4 md:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <h3 class="font-serif text-xl font-bold text-white mb-4">Het Jachtmeer</h3>
+          <p class="text-white/60 leading-relaxed">Natuurgebied in de wijk Mettegeupel, Oss. Een oase van rust voor wandelaars, vissers en schaatsliefhebbers.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold text-white mb-4">Activiteiten</h4>
+          <ul class="space-y-2">
+            <li><a href="vissen.html" class="hover:text-leaf transition-colors duration-200 cursor-pointer">Vissen</a></li>
+            <li><a href="schaatsen.html" class="hover:text-leaf transition-colors duration-200 cursor-pointer">Schaatsen</a></li>
+            <li><a href="contact.html" class="hover:text-leaf transition-colors duration-200 cursor-pointer">Bereikbaarheid</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-white mb-4">Locatie</h4>
+          <p class="text-white/60">Jachtslot 3<br>5346 WK Oss</p>
+          <p class="text-white/60 mt-2">24 uur per dag geopend</p>
+          <a href="https://maps.app.goo.gl/tLU4Hb7Dak1Aaz6g7" target="_blank" rel="noopener" class="inline-flex items-center gap-1 mt-3 text-leaf hover:text-white transition-colors duration-200 cursor-pointer">
+            Bekijk op Google Maps
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-8 text-center text-white/40 text-sm">
+        <p>Gebouwd door <a href="https://www.code-lieshout.nl" class="text-leaf hover:text-white transition-colors duration-200 cursor-pointer">Code Lieshout</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="fixed inset-0 z-[100] bg-black/90 hidden items-center justify-center p-4 cursor-pointer" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Vergroot beeld" class="max-w-full max-h-full object-contain rounded-organic-sm">
+    <button class="absolute top-6 right-6 text-white/80 hover:text-white min-h-[44px] min-w-[44px] flex items-center justify-center cursor-pointer" aria-label="Sluiten">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+  </div>
+
+  <script>
+    // Mobile menu
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+
+    // Lightbox
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      const lb = document.getElementById('lightbox');
+      lb.classList.remove('hidden');
+      lb.classList.add('flex');
+    }
+    function closeLightbox() {
+      const lb = document.getElementById('lightbox');
+      lb.classList.add('hidden');
+      lb.classList.remove('flex');
+    }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+</body>
+</html>
